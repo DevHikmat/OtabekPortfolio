@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/* Please ❤ this if you like it! */
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+// MY SASS FILES
+@import "./navigation";
+@import "./button";
+
+/* #Primary
+================================================== */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  // font-family: "Roboto", sans-serif;
+  position: relative;
+}
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header-wrapper {
+  background: url("https://img.freepik.com/free-vector/blue-polygon-dark-background-social-template_53876-116080.jpg?w=2000&t=st=1695407667~exp=1695408267~hmac=514a0bbaee0c360b19a266590b690fb5d984eaeab2ab5a91be35a0ae9eb33b96")
+    no-repeat center center / cover;
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  padding-top: 62px;
+  overflow: hidden;
+  .navbar {
+    // background-color: transparent;
+  }
+  .content {
+    .left {
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      color: white;
+      h1 {
+        letter-spacing: 0.5px;
+        margin-bottom: 30px;
+      }
+      p {
+        letter-spacing: 0.5px;
+        margin-bottom: 25px;
+      }
+      button {
+        letter-spacing: 1px;
+      }
+    }
+    .right {
+      height: 100vh;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+}
+#tsparticles {
+  canvas {
+    position: absolute !important;
+    max-height: 100vh !important;
+    height: 100vh !important;
+  }
+}
+
+.about-me {
+  padding: 120px 0;
+  &-content {
+    h2 {
+      margin-bottom: 30px;
+    }
+    p {
+      max-width: 450px;
+      text-align: justify;
+    }
+    &-socials {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      h3 {
+      }
+      a {
+        text-decoration: none;
+        &:hover {
+        }
+        i {
+          width: 50px;
+          height: 40px;
+          display: block;
+          background-color: rgba($color: $primary, $alpha: 0.85);
+          border-radius: 30%;
+          color: white;
+          text-align: center;
+          line-height: 40px;
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
+    }
+    button {
+    }
+  }
+  &-image {
+    img {
+    }
+  }
+}
