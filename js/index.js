@@ -12,8 +12,8 @@ function test() {
     height: activeWidthNewAnimHeight + "px",
     width: activeWidthNewAnimWidth + "px",
   });
-  $("#navbarSupportedContent").on("click", "li", function (e) {
-    $("#navbarSupportedContent ul li").removeClass("active");
+  $("#navbarSupportedContent").on("click", "a", function (e) {
+    $("#navbarSupportedContent ul a").removeClass("active");
     $(this).addClass("active");
     var activeWidthNewAnimHeight = $(this).innerHeight();
     var activeWidthNewAnimWidth = $(this).innerWidth();
@@ -31,32 +31,32 @@ $(document).ready(function () {
   setTimeout(function () {
     test();
   });
-});
+}, 0);
 $(window).on("resize", function () {
   setTimeout(function () {
     test();
-  });
+  }, 0);
 });
 $(".navbar-toggler").click(function () {
   $(".navbar-collapse").slideToggle(300);
   setTimeout(function () {
     test();
-  });
+  }, 0);
 });
 
 // --------------add active class-on another-page move----------
-jQuery(document).ready(function ($) {
-  // Get current path and find target link
-  var path = window.location.pathname.split("/").pop();
+// jQuery(document).ready(function ($) {
+//   // Get current path and find target link
+//   var path = window.location.pathname.split("/").pop();
 
-  // Account for home page with empty path
-  if (path == "") {
-    path = "index.html";
-  }
-  var target = $('#navbarSupportedContent ul li a[href="' + path + '"]');
-  // Add active class to target link
-  target.parent().addClass("active");
-});
+//   // Account for home page with empty path
+//   if (path == "") {
+//     path = "index.html";
+//   }
+//   var target = $('#navbarSupportedContent ul li a[href="' + path + '"]');
+//   // Add active class to target link
+//   target.parent().addClass("active");
+// });
 
 // Add active class on another page linked
 // ==========================================
