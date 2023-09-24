@@ -29,8 +29,15 @@ body {
 }
 
 .header-wrapper {
-  background: url("https://img.freepik.com/free-vector/blue-polygon-dark-background-social-template_53876-116080.jpg?w=2000&t=st=1695407667~exp=1695408267~hmac=514a0bbaee0c360b19a266590b690fb5d984eaeab2ab5a91be35a0ae9eb33b96")
-    no-repeat center center / cover;
+  // background: url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+  //   no-repeat center center / cover;
+  background: rgb(88, 81, 198);
+  background: linear-gradient(
+    90deg,
+    rgba(88, 81, 198, 1) 7%,
+    rgba(5, 5, 25, 1) 100%,
+    rgba(39, 164, 190, 1) 100%
+  );
   overflow: hidden;
 }
 
@@ -86,7 +93,13 @@ header {
 }
 
 .about-me {
-  padding: 120px 0;
+  background: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    no-repeat center center / cover;
+  background-attachment: fixed;
+  .inner-bg {
+    padding: 120px 0;
+    background-color: rgba($color: $primary, $alpha: 0);
+  }
   &-content {
     h2 {
       margin-bottom: 30px;

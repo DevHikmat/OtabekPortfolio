@@ -1,8 +1,18 @@
 #testimonials {
+  background: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    no-repeat center center / cover;
+  background-attachment: fixed;
   position: relative;
-  height: 100vh;
   background-color: #ccc;
-  padding-top: 200px;
+  .inner-bg {
+    padding-top: 200px;
+    height: 100vh;
+    background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.1),
+      $secondary
+    );
+  }
   .container {
     margin: 0 auto;
     width: 350px;
@@ -25,16 +35,19 @@
   position: absolute;
   background: #fff;
   width: 250px;
-  height: 400px;
   text-align: center;
   opacity: 0.95;
   border-radius: 10px;
-  padding: 20px 10px 20px;
+  height: 370px;
+  padding: 20px;
   box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
   img {
-    width: 50%;
+    width: 35%;
     display: block;
     margin: 0 auto;
+    margin-bottom: 10px;
+    box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.2);
+    border-radius: 50%;
   }
   .fullname {
     color: green;
@@ -42,9 +55,12 @@
     letter-spacing: 0.3px;
   }
   h5 {
+    font-size: 14px;
+    color: #333;
   }
   p {
-    font-size: 12px;
+    font-size: 11px;
+    color: #777;
   }
 }
 
@@ -70,20 +86,17 @@
 .next,
 .prev {
   position: absolute;
-  top: 100px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
   text-align: center;
   cursor: pointer;
   background: rgba($color: $primary, $alpha: 0.6);
-  border-radius: 50%;
+  border-radius: 5px;
   transition: all 0.1s, top 0.1s;
   color: white;
   font-size: 25px;
   i {
-    height: 30px;
-    width: 30px;
   }
 }
 .next:hover,
@@ -92,12 +105,13 @@
 }
 .next:active,
 .prev:active {
-  top: 104px;
   box-shadow: 0 1px 0 #999;
 }
 .next {
-  right: 5em;
+  top: 50%;
+  right: 12em;
 }
 .prev {
-  left: 5em;
+  top: 50%;
+  left: 12em;
 }
