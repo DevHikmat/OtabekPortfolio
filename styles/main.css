@@ -233,6 +233,36 @@
     left: -25px;
   }
 }
+.anime {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+.anime .anim {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 5px 20px;
+  background-color: rebeccapurple;
+  border-radius: 5px;
+}
+.anime .rector {
+  width: 250px;
+  animation-name: rector;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes rector {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: rebeccapurple;
+  }
+}
 .custom-btn {
   color: #fff;
   border-radius: 5px;
@@ -249,7 +279,7 @@
 .btn-11 {
   display: block;
   border: none;
-  background: linear-gradient(to right bottom, #0f122c, #1f2774);
+  background: #5161ce;
   color: #fff;
   overflow: hidden;
   position: relative;
@@ -273,7 +303,7 @@
 }
 
 .btn-11:hover {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .btn-11:active {
@@ -332,7 +362,7 @@
 
 .card {
   width: 71.5vw;
-  height: 100vw;
+  height: 90vw;
   position: relative;
   overflow: hidden;
   margin: 20px;
@@ -349,6 +379,60 @@
     width: clamp(22vw, 60vh, 15vw);
     height: clamp(18vw, 85vh, 25.2vw);
   }
+}
+.card:hover .card-hide-content {
+  top: 0;
+}
+.card-hide-content {
+  text-align: center;
+  transition: all 0.3s linear;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.8;
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #0f122c;
+  color: white;
+}
+.card-hide-content::before, .card-hide-content::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+.card-hide-content::before {
+  left: 20px;
+}
+.card-hide-content::after {
+  right: 20px;
+  border-right: 2px solid white;
+  border-left: none;
+}
+.card-hide-content h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.card-hide-content h3::after {
+  content: "";
+  height: 3px;
+  width: 80px;
+  border-radius: 3px;
+  background-color: #5161ce;
+  display: block;
+  margin: 0 auto;
+}
+.card-hide-content p {
+  margin-bottom: 50px;
 }
 
 .card.animated {
@@ -424,7 +508,7 @@ p {
   }
 }
 #testimonials {
-  background: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center/cover;
+  background: url("../static/images/up-2081170_1920.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   position: relative;
   background-color: #ccc;
@@ -432,7 +516,6 @@ p {
 #testimonials .inner-bg {
   padding-top: 200px;
   height: 100vh;
-  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.1), #5161ce);
 }
 #testimonials .container {
   margin: 0 auto;
@@ -485,27 +568,27 @@ p {
 }
 
 .a {
-  transform: rotateY(0deg) translateZ(250px);
+  transform: rotateY(0deg) translateZ(350px);
 }
 
 .b {
-  transform: rotateY(60deg) translateZ(250px);
+  transform: rotateY(60deg) translateZ(350px);
 }
 
 .c {
-  transform: rotateY(120deg) translateZ(250px);
+  transform: rotateY(120deg) translateZ(350px);
 }
 
 .d {
-  transform: rotateY(180deg) translateZ(250px);
+  transform: rotateY(180deg) translateZ(350px);
 }
 
 .e {
-  transform: rotateY(240deg) translateZ(250px);
+  transform: rotateY(240deg) translateZ(350px);
 }
 
 .f {
-  transform: rotateY(300deg) translateZ(250px);
+  transform: rotateY(300deg) translateZ(350px);
 }
 
 .next,
@@ -745,8 +828,7 @@ body {
 }
 
 .header-wrapper {
-  background: rgb(88, 81, 198);
-  background: linear-gradient(90deg, rgb(88, 81, 198) 7%, rgb(5, 5, 25) 100%, rgb(39, 164, 190) 100%);
+  background: url("../static/images/Rectangle.png") no-repeat center top/cover;
   overflow: hidden;
 }
 
@@ -758,7 +840,7 @@ header {
   overflow: hidden;
 }
 header .content .left {
-  height: 90%;
+  padding-top: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -766,7 +848,10 @@ header .content .left {
   color: white;
 }
 header .content .left h1 {
+  text-align: center;
   letter-spacing: 0.5px;
+  font-size: 25px;
+  text-transform: uppercase;
   margin-bottom: 30px;
 }
 header .content .left p {
@@ -796,7 +881,7 @@ header .content .right img {
 }
 
 .about-me {
-  background: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center/cover;
+  background: url("https://img.freepik.com/free-vector/blurred-bokeh-pattern-wallpaper-soft-touch-your-walls_1017-43483.jpg?w=2000&t=st=1695752062~exp=1695752662~hmac=0bc5d1ec66c7d5ed339ac38e5fa50dfff7649af89b96342abe5e9623d1f8b6d8") no-repeat center center/cover;
   background-attachment: fixed;
 }
 .about-me .inner-bg {

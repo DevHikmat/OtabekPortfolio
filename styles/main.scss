@@ -7,6 +7,7 @@
 
 // MY SASS FILES
 @import "./navigation";
+@import "./tree-anime";
 @import "./button";
 @import "./card";
 @import "./testimonials";
@@ -29,19 +30,12 @@ body {
 }
 
 .header-wrapper {
-  // background: url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
-  //   no-repeat center center / cover;
-  background: rgb(88, 81, 198);
-  background: linear-gradient(
-    90deg,
-    rgba(88, 81, 198, 1) 7%,
-    rgba(5, 5, 25, 1) 100%,
-    rgba(39, 164, 190, 1) 100%
-  );
+  background: url("../static/images/Rectangle.png") no-repeat center top / cover;
   overflow: hidden;
 }
 
 header {
+  // background: rgba($color: #000000, $alpha: 0.3);
   position: relative;
   z-index: 2;
   height: 100vh;
@@ -52,14 +46,17 @@ header {
   }
   .content {
     .left {
-      height: 90%;
+      padding-top: 180px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
       color: white;
       h1 {
+        text-align: center;
         letter-spacing: 0.5px;
+        font-size: 25px;
+        text-transform: uppercase;
         margin-bottom: 30px;
       }
       p {
@@ -93,7 +90,8 @@ header {
 }
 
 .about-me {
-  background: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+  // color: white;
+  background: url("https://img.freepik.com/free-vector/blurred-bokeh-pattern-wallpaper-soft-touch-your-walls_1017-43483.jpg?w=2000&t=st=1695752062~exp=1695752662~hmac=0bc5d1ec66c7d5ed339ac38e5fa50dfff7649af89b96342abe5e9623d1f8b6d8")
     no-repeat center center / cover;
   background-attachment: fixed;
   .inner-bg {

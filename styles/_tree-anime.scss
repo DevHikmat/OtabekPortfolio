@@ -1,0 +1,30 @@
+.anime {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  .anim {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 5px 20px;
+    background-color: rebeccapurple;
+    border-radius: 5px;
+  }
+  .rector {
+    width: 250px;
+    animation-name: rector;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes rector {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: rebeccapurple;
+  }
+}
