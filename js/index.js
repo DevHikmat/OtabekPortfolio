@@ -1,77 +1,3 @@
-// ---------Responsive-navbar-active-animation-----------
-function test() {
-  var tabsNewAnim = $("#navbarSupportedContent");
-  var activeItemNewAnim = tabsNewAnim.find(".active");
-  var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-  var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-  var itemPosNewAnimTop = activeItemNewAnim.position();
-  var itemPosNewAnimLeft = activeItemNewAnim.position();
-  $(".hori-selector").css({
-    top: itemPosNewAnimTop.top + "px",
-    left: itemPosNewAnimLeft.left + "px",
-    height: activeWidthNewAnimHeight + "px",
-    width: activeWidthNewAnimWidth + "px",
-  });
-  $("#navbarSupportedContent").on("click", "a", function (e) {
-    $("#navbarSupportedContent ul a").removeClass("active");
-    $(this).addClass("active");
-    var activeWidthNewAnimHeight = $(this).innerHeight();
-    var activeWidthNewAnimWidth = $(this).innerWidth();
-    var itemPosNewAnimTop = $(this).position();
-    var itemPosNewAnimLeft = $(this).position();
-    $(".hori-selector").css({
-      top: itemPosNewAnimTop.top + "px",
-      left: itemPosNewAnimLeft.left + "px",
-      height: activeWidthNewAnimHeight + "px",
-      width: activeWidthNewAnimWidth + "px",
-    });
-  });
-}
-$(document).ready(function () {
-  setTimeout(function () {
-    test();
-  }, 0);
-});
-$(window).on("scroll", function () {
-  setTimeout(function () {
-    test();
-  }, 0);
-});
-$(window).on("resize", function () {
-  setTimeout(function () {
-    test();
-  }, 0);
-});
-$(".navbar-toggler").click(function () {
-  $(".navbar-collapse").slideToggle(300);
-  setTimeout(function () {
-    test();
-  }, 0);
-});
-
-// --------------add active class-on another-page move----------
-// jQuery(document).ready(function ($) {
-//   // Get current path and find target link
-//   var path = window.location.pathname.split("/").pop();
-
-//   // Account for home page with empty path
-//   if (path == "") {
-//     path = "index.html";
-//   }
-//   var target = $('#navbarSupportedContent ul li a[href="' + path + '"]');
-//   // Add active class to target link
-//   target.parent().addClass("active");
-// });
-
-// Add active class on another page linked
-// ==========================================
-$(window).on("load", function () {
-  let menu = document.getElementById("menu");
-  menu.onclick = function () {
-    menu.classList.toggle("openmenu");
-  };
-});
-
 // PARTICLE ANIMATION
 // tsParticles.load({
 //   id: "tsparticles",
@@ -755,83 +681,23 @@ tsParticles.load({
   },
 });
 
-var x;
-var $cards = $(".card");
-var $style = $(".hover");
-
-$cards
-  .on("mousemove touchmove", function (e) {
-    // normalise touch/mouse
-    var pos = [e.offsetX, e.offsetY];
-    e.preventDefault();
-    if (e.type === "touchmove") {
-      pos = [e.touches[0].clientX, e.touches[0].clientY];
-    }
-    var $card = $(this);
-    // math for mouse position
-    var l = pos[0];
-    var t = pos[1];
-    var h = $card.height();
-    var w = $card.width();
-    var px = Math.abs(Math.floor((100 / w) * l) - 100);
-    var py = Math.abs(Math.floor((100 / h) * t) - 100);
-    var pa = 50 - px + (50 - py);
-    // math for gradient / background positions
-    var lp = 50 + (px - 50) / 1.5;
-    var tp = 50 + (py - 50) / 1.5;
-    var px_spark = 50 + (px - 50) / 7;
-    var py_spark = 50 + (py - 50) / 7;
-    var p_opc = 20 + Math.abs(pa) * 1.5;
-    var ty = ((tp - 50) / 2) * -1;
-    var tx = ((lp - 50) / 1.5) * 0.5;
-    // css to apply for active card
-    var grad_pos = `background-position: ${lp}% ${tp}%;`;
-    var sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`;
-    var opc = `opacity: ${p_opc / 100};`;
-    var tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg)`;
-    // need to use a <style> tag for psuedo elements
-    var style = `
-      .card:hover:before { ${grad_pos} }  /* gradient */
-      .card:hover:after { ${sprk_pos} ${opc} }   /* sparkles */ 
-    `;
-    // set / apply css class and style
-    $cards.removeClass("active");
-    $card.removeClass("animated");
-    $card.attr("style", tf);
-    $style.html(style);
-    if (e.type === "touchmove") {
-      return false;
-    }
-    clearTimeout(x);
-  })
-  .on("mouseout touchend touchcancel", function () {
-    // remove css, apply custom animation on end
-    var $card = $(this);
-    $style.html("");
-    $card.removeAttr("style");
-    x = setTimeout(function () {
-      $card.addClass("animated");
-    }, 2500);
-  });
-
-// Testimonials carousel
-var carousel = $(".carousel"),
-  currdeg = 0;
-
-$(".next").on("click", { d: "n" }, rotate);
-$(".prev").on("click", { d: "p" }, rotate);
-
-function rotate(e) {
-  if (e.data.d == "n") {
-    currdeg = currdeg - 60;
-  }
-  if (e.data.d == "p") {
-    currdeg = currdeg + 60;
-  }
-  carousel.css({
-    "-webkit-transform": "rotateY(" + currdeg + "deg)",
-    "-moz-transform": "rotateY(" + currdeg + "deg)",
-    "-o-transform": "rotateY(" + currdeg + "deg)",
-    transform: "rotateY(" + currdeg + "deg)",
-  });
-}
+var swiper = new Swiper(".mySwiper", {
+  autoplay: true,
+  autoplay: {
+    delay: 5000,
+  },
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+});

@@ -1,8 +1,13 @@
 #contact {
   background-color: $primary;
+  padding: 100px 0;
   .container {
     height: 600px;
     position: relative;
+  }
+  h2 {
+    color: white;
+    margin-bottom: 50px;
   }
   img {
     width: 50px;
@@ -38,14 +43,8 @@
 }
 
 .login-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 40px;
-  width: 100%;
-  transform: translate(-50%, -50%);
+  padding: 80px 20px;
   background: $secondary;
-  box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
 }
@@ -53,19 +52,22 @@
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
   text-align: center;
 }
 
 .login-box .user-box {
   position: relative;
+  max-width: 300px;
+  .iti {
+    width: 100%;
+  }
 }
 
 .login-box .user-box input {
+  display: block;
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
   margin-bottom: 30px;
   border: none;
   border-bottom: 1px solid #fff;
@@ -78,9 +80,8 @@
   left: 0;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
-  pointer-events: none;
   transition: 0.5s;
+  color: white;
 }
 
 .login-box .user-box input:focus ~ label,
@@ -91,11 +92,10 @@
   font-size: 12px;
 }
 
-.login-box form a {
+.login-box form button {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: white;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -103,21 +103,23 @@
   transition: 0.5s;
   margin-top: 40px;
   letter-spacing: 4px;
+  border-radius: 5px;
+  border: none;
 }
 
-.login-box a:hover {
+.login-box button:hover {
   background: $primary;
-  border-radius: 5px;
+  color: white;
   box-shadow: 0 0 5px $primary, 0 0 25px $primary, 0 0 50px $primary,
     0 0 100px $primary;
 }
 
-.login-box a span {
+.login-box button span {
   position: absolute;
   display: block;
 }
 
-.login-box a span:nth-child(1) {
+.login-box button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -136,7 +138,7 @@
   }
 }
 
-.login-box a span:nth-child(2) {
+.login-box button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -156,7 +158,7 @@
   }
 }
 
-.login-box a span:nth-child(3) {
+.login-box button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -176,7 +178,7 @@
   }
 }
 
-.login-box a span:nth-child(4) {
+.login-box button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;

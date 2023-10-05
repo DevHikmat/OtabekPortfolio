@@ -12,6 +12,18 @@
 @import "./card";
 @import "./testimonials";
 @import "./contact";
+@import "./modal";
+// Header typing animation
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
 
 /* #Primary
 ================================================== */
@@ -42,7 +54,12 @@ header {
   padding-top: 62px;
   overflow: hidden;
   .navbar {
-    // background-color: transparent;
+    .language {
+      .dropdown {
+        &-menu {
+        }
+      }
+    }
   }
   .content {
     .left {
@@ -53,11 +70,16 @@ header {
       align-items: start;
       color: white;
       h1 {
-        text-align: center;
         letter-spacing: 0.5px;
         font-size: 25px;
         text-transform: uppercase;
+        width: 200px;
+        max-width: 200px;
         margin-bottom: 30px;
+        animation: typing 2s steps(18), cursor 1s step-end infinite alternate;
+        border-right: 5px solid #fff;
+        white-space: nowrap;
+        overflow: hidden;
       }
       p {
         letter-spacing: 0.5px;

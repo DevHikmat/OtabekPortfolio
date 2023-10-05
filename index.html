@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rayimjonov</title>
     <link rel="icon" href="./static/icons/Logo.png" />
-    <!-- Phone number integrity -->
-
-    <!-- Phone number integrity -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -20,6 +17,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
     />
+    <!-- Swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- Swiper css -->
+    <!-- Phone number integrity -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css"
+    />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <!-- Phone number integrity -->
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body data-spy="scroll" data-target="#scrolled-navbar">
@@ -74,6 +84,15 @@
                   <i class="bx bx-user"></i>Contact Me
                 </a>
               </ul>
+              <div class="language">
+                <!-- <div class="dropdown">
+                  <button data-toggle="dropdown" class="">uz</button>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-item">ru</div>
+                    <div class="dropdown-item">en</div>
+                  </div>
+                </div> -->
+              </div>
             </div>
           </div>
         </nav>
@@ -82,16 +101,16 @@
             <div class="row" style="flex-wrap: wrap-reverse">
               <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="left">
-                  <h1>Hi I'm Otabek.</h1>
+                  <h1 class="cssanimation typing">Hi I'm Otabek.</h1>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Hic, molestias sequi odio voluptatum, cum porro deserunt,
                     aperiam tenetur accusamus ut laboriosam incidunt aut neque
                     similique ullam earum? Omnis, ut expedita?
                   </p>
-                  <button class="custom-btn btn-11">
+                  <a href="#contact" class="custom-btn btn-11">
                     <span>Contact Me</span>
-                  </button>
+                  </a>
                 </div>
               </div>
               <div class="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -251,17 +270,19 @@
               aria-labelledby="home-tab"
             >
               <section class="cards">
-                <div class="card medical animated">
-                  <img
-                    src="./static/images/card - portfolio.png"
-                    alt="img"
-                    class="img-fluid"
-                  />
-                  <div class="card-hide-content">
-                    <h3>BYORK</h3>
-                    <p>Medical division</p>
+                <a href="./pages/byork.html">
+                  <div class="card medical animated">
+                    <img
+                      src="./static/images/card - portfolio.png"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                    <div class="card-hide-content">
+                      <h3>BYORK</h3>
+                      <p>Medical division</p>
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div class="card clinic animated">
                   <img
                     src="./static/images/card portfolio (2).png"
@@ -366,18 +387,18 @@
             >
               <section class="cards">
                 <div class="card web animated">
-                  <img
+                  <!-- <img
                     src="./static/images/React App-1.png"
                     alt="img"
                     class="img-fluid"
-                  />
+                  /> -->
                 </div>
                 <div class="card web animated">
-                  <img
+                  <!-- <img
                     src="./static/images/React App-1.png"
                     alt="img"
                     class="img-fluid"
-                  />
+                  /> -->
                 </div>
               </section>
             </div>
@@ -420,122 +441,131 @@
     <section id="testimonials">
       <div class="inner-bg">
         <div class="container">
-          <div class="carousel">
-            <div class="item a">
-              <img
-                src="./static/images/circle - Mirjamol Mirabidov.png"
-                alt="Klinika"
-                class="img-fluid"
-              />
-              <span class="fullname">Mirjalol Mirobidov</span>
-              <h5>
-                <i class="bx bxs-building"></i>BYORK Kompaniyasi direktori.
-              </h5>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-                eveniet officia excepturi. Reiciendis quae ratione aliquid
-                dolorum dicta iste fugit nulla ad at, odit facilis nihil ducimus
-                provident repellendus aliquam a esse magni velit. Provident
-                consectetur dolore autem alias non. Nisi ipsa est eum
-                praesentium sed vitae blanditiis incidunt velit!
-              </p>
-            </div>
-            <div class="item b">
-              <img
-                src="./static/images/circle - Klinika Savriya.png"
-                alt="Klinika"
-                class="img-fluid"
-              />
-              <span class="fullname">Mirabidov Mirvaxid</span>
-              <h5>
-                <i class="bx bxs-building"></i>Savriya klinikasi direktori
-              </h5>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-                eveniet officia excepturi. Reiciendis quae ratione aliquid
-                dolorum dicta iste fugit nulla ad at, odit facilis nihil ducimus
-                provident repellendus aliquam a esse magni velit. Provident
-                consectetur dolore autem alias non. Nisi ipsa est eum
-                praesentium sed vitae blanditiis incidunt velit!
-              </p>
-            </div>
-            <div class="item c">
-              <img
-                src="./static/images/circle - white dental clinic.png"
-                alt="Klinika"
-                class="img-fluid"
-              />
-              <span class="fullname">Nurullakhon Sagdullayev</span>
-              <h5>
-                <i class="bx bxs-building"></i>The white dental clinic direktori
-              </h5>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-                eveniet officia excepturi. Reiciendis quae ratione aliquid
-                dolorum dicta iste fugit nulla ad at, odit facilis nihil ducimus
-                provident repellendus aliquam a esse magni velit. Provident
-                consectetur dolore autem alias non. Nisi ipsa est eum
-                praesentium sed vitae blanditiis incidunt velit!
-              </p>
-            </div>
-            <div class="item d">
-              <img
-                src="./static/images/circle bugungi tibbiyot.png"
-                alt="Klinika"
-                class="img-fluid"
-              />
-              <span class="fullname">O'lmasov Botir</span>
-              <h5><i class="bx bxs-building"></i>PR direktor</h5>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-                eveniet officia excepturi. Reiciendis quae ratione aliquid
-                dolorum dicta iste fugit nulla ad at, odit facilis nihil ducimus
-                provident repellendus aliquam a esse magni velit. Provident
-                consectetur dolore autem alias non. Nisi ipsa est eum
-                praesentium sed vitae blanditiis incidunt velit!
-              </p>
-            </div>
-            <div class="item e">
-              <img
-                src="./static/images/circle - komola stom.png"
-                alt="Klinika"
-                class="img-fluid"
-              />
-              <span class="fullname">Mirabidova Komola</span>
-              <h5><i class="bx bxs-building"></i>Stomatolog</h5>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-                eveniet officia excepturi. Reiciendis quae ratione aliquid
-                dolorum dicta iste fugit nulla ad at, odit facilis nihil ducimus
-                provident repellendus aliquam a esse magni velit. Provident
-                consectetur dolore autem alias non. Nisi ipsa est eum
-                praesentium sed vitae blanditiis incidunt velit!
-              </p>
-            </div>
-            <div class="item f">
-              <img
-                src="./static/images/circle sohiba.png"
-                alt="Klinika"
-                class="img-fluid"
-              />
-              <span class="fullname">Soxiba Mullaeva</span>
-              <h5><i class="bx bxs-building"></i>Jurnalist va PHD</h5>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-                eveniet officia excepturi. Reiciendis quae ratione aliquid
-                dolorum dicta iste fugit nulla ad at, odit facilis nihil ducimus
-                provident repellendus aliquam a esse magni velit. Provident
-                consectetur dolore autem alias non. Nisi ipsa est eum
-                praesentium sed vitae blanditiis incidunt velit!
-              </p>
+          <div class="title">
+            <h2>Testimonials</h2>
+          </div>
+          <div class="testimonials-carousel">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./static/images/circle - Mirjamol Mirabidov.png"
+                    alt="Klinika"
+                    class="img-fluid"
+                  />
+                  <span class="fullname">Mirjalol Mirobidov</span>
+                  <h5>
+                    <i class="bx bxs-building"></i>BYORK Kompaniyasi direktori.
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Amet eveniet officia excepturi. Reiciendis quae ratione
+                    aliquid dolorum dicta iste fugit nulla ad at, odit facilis
+                    nihil ducimus provident repellendus aliquam a esse magni
+                    velit. Provident consectetur dolore autem alias non. Nisi
+                    ipsa est eum praesentium sed vitae blanditiis incidunt
+                    velit!
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./static/images/circle - Klinika Savriya.png"
+                    alt="Klinika"
+                    class="img-fluid"
+                  />
+                  <span class="fullname">Mirabidov Mirvaxid</span>
+                  <h5>
+                    <i class="bx bxs-building"></i>Savriya klinikasi direktori
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Amet eveniet officia excepturi. Reiciendis quae ratione
+                    aliquid dolorum dicta iste fugit nulla ad at, odit facilis
+                    nihil ducimus provident repellendus aliquam a esse magni
+                    velit. Provident consectetur dolore autem alias non. Nisi
+                    ipsa est eum praesentium sed vitae blanditiis incidunt
+                    velit!
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./static/images/circle - white dental clinic.png"
+                    alt="Klinika"
+                    class="img-fluid"
+                  />
+                  <span class="fullname">Nurullakhon Sagdullayev</span>
+                  <h5>
+                    <i class="bx bxs-building"></i>The white dental clinic
+                    direktori
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Amet eveniet officia excepturi. Reiciendis quae ratione
+                    aliquid dolorum dicta iste fugit nulla ad at, odit facilis
+                    nihil ducimus provident repellendus aliquam a esse magni
+                    velit. Provident consectetur dolore autem alias non. Nisi
+                    ipsa est eum praesentium sed vitae blanditiis incidunt
+                    velit!
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./static/images/circle bugungi tibbiyot.png"
+                    alt="Klinika"
+                    class="img-fluid"
+                  />
+                  <span class="fullname">O'lmasov Botir</span>
+                  <h5><i class="bx bxs-building"></i>PR direktor</h5>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Amet eveniet officia excepturi. Reiciendis quae ratione
+                    aliquid dolorum dicta iste fugit nulla ad at, odit facilis
+                    nihil ducimus provident repellendus aliquam a esse magni
+                    velit. Provident consectetur dolore autem alias non. Nisi
+                    ipsa est eum praesentium sed vitae blanditiis incidunt
+                    velit!
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./static/images/circle - komola stom.png"
+                    alt="Klinika"
+                    class="img-fluid"
+                  />
+                  <span class="fullname">Mirabidova Komola</span>
+                  <h5><i class="bx bxs-building"></i>Stomatolog</h5>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Amet eveniet officia excepturi. Reiciendis quae ratione
+                    aliquid dolorum dicta iste fugit nulla ad at, odit facilis
+                    nihil ducimus provident repellendus aliquam a esse magni
+                    velit. Provident consectetur dolore autem alias non. Nisi
+                    ipsa est eum praesentium sed vitae blanditiis incidunt
+                    velit!
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./static/images/circle sohiba.png"
+                    alt="Klinika"
+                    class="img-fluid"
+                  />
+                  <span class="fullname">Soxiba Mullaeva</span>
+                  <h5><i class="bx bxs-building"></i>Jurnalist va PHD</h5>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Amet eveniet officia excepturi. Reiciendis quae ratione
+                    aliquid dolorum dicta iste fugit nulla ad at, odit facilis
+                    nihil ducimus provident repellendus aliquam a esse magni
+                    velit. Provident consectetur dolore autem alias non. Nisi
+                    ipsa est eum praesentium sed vitae blanditiis incidunt
+                    velit!
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="swiper-pagination"></div> -->
             </div>
           </div>
-        </div>
-        <div class="next">
-          <i class="bx bx-chevron-right"></i>
-        </div>
-        <div class="prev">
-          <i class="bx bx-chevron-left"></i>
         </div>
       </div>
     </section>
@@ -544,7 +574,7 @@
         <div class="login-box">
           <h2>Who are you?</h2>
           <div class="row">
-            <div class="col-5">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xs-5">
               <div class="content">
                 <div class="d-flex align-items-center mb-3">
                   <img
@@ -570,41 +600,84 @@
                 <a href=""><i class="bx bxl-youtube"></i></a>
               </div>
             </div>
-            <div class="col-2"></div>
-            <div class="col-5">
-              <span class="text-white">
+            <div class="col-0 col-sm-0 col-md-2 col-lg-2 col-xs-1"></div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xs-5">
+              <span class="text-white d-block mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quibusdam nulla velit in soluta, nihil quae voluptas, corporis
                 distinctio ea provident vitae perferendis aperiam nam. Officiis
                 unde consequuntur nulla inventore possimus.
               </span>
-              <form>
+              <form id="contact-form">
                 <div class="user-box">
-                  <input type="text" name="" required="" />
+                  <input type="text" name="name" id="username" required="" />
                   <label>Name</label>
                 </div>
                 <div class="user-box">
-                  <input type="tel" name="" required="" />
-                  <label>Phone</label>
+                  <input type="tel" name="phone" id="phone" required="" />
                 </div>
-                <a href="#">
+                <button type="submit">
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
                   Submit
-                </a>
+                </button>
               </form>
+              <div id="submit-modal" class="modal fade">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <svg
+                      id="successAnimation"
+                      class="animated"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="70"
+                      height="70"
+                      viewBox="0 0 70 70"
+                    >
+                      <path
+                        id="successAnimationResult"
+                        fill="#D8D8D8"
+                        d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"
+                      />
+                      <circle
+                        id="successAnimationCircle"
+                        cx="35"
+                        cy="35"
+                        r="24"
+                        stroke="#979797"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        fill="transparent"
+                      />
+                      <polyline
+                        id="successAnimationCheck"
+                        stroke="#979797"
+                        stroke-width="2"
+                        points="23 34 34 43 47 27"
+                        fill="transparent"
+                      />
+                    </svg>
+                    <h4 class="text-success">Message sended successfully!</h4>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <script src="js/particle.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/particle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script src="./js/index.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/cards.js"></script>
+    <script src="./js/testimonials.js"></script>
+    <script src="./js/submit.js"></script>
   </body>
 </html>
