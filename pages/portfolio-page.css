@@ -1,0 +1,62 @@
+:root {
+  --orange: rgb(231, 177, 78);
+  --primary: #343a6e;
+  --light: rgba(255, 255, 255, 0.8);
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--light);
+  padding-top: 50px;
+}
+header h3 {
+  /* text-align: center; */
+}
+header h3 i {
+}
+header i {
+  color: var(--orange);
+}
+header p {
+  text-indent: 50px;
+}
+.client-box {
+}
+.client-box h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.client-box h3 {
+  text-align: left;
+}
+.client-box h3 i {
+}
+.client-box p {
+}
+.client-box img {
+}
+
+.target-box {
+}
+.target-box ul {
+}
+.target-box ul li {
+  margin-bottom: 10px;
+}
+.target-box ul li i {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--light);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+}
+.target-box ul li span {
+}
+.task-box {
+}
+.result-box {
+}
