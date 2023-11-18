@@ -17,7 +17,7 @@ form.addEventListener("submit", function (e) {
   tel += phone.value;
   let my_text = `New Message: %0A - Sender Name: ${username.value} %0A - Country: ${country} %0A - Phone number: +${tel}`;
   let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}`;
-  // handleSubmit(url);
+  handleSubmit(url);
   modal.modal("show");
 });
 const handleSubmit = async (url) => {
